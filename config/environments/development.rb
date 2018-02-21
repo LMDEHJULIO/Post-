@@ -51,6 +51,8 @@ Rails.application.configure do
   #Devise configuration
    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  #Paperclip configuration
+  Paperclip.options[:command_path] = "/usr/local/bin/convert"
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
